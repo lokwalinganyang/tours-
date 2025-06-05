@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/travel-tours/browser/browser",
+    "public": "dist\\travel-tours\\browser\\browser",
     "ignore": [
       "firebase.json",
       "**/.*",
