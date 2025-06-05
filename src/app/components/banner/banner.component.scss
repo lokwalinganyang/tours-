@@ -1,0 +1,63 @@
+:root {
+  --dark-green: #088508;
+  --orange: #F57F17;
+  --white: #085c1f;
+}
+
+.banner {
+  background-color: #025719; // Changed to green
+  color: #030303;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 0;
+  min-height: 20vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .enquiry-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#F57F17, 10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 1.5rem 0.5rem;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    .enquiry-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+  }
+}

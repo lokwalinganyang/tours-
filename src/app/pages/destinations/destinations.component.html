@@ -1,0 +1,18 @@
+<div class="destinations-container">
+  <div class="destinations-header" @fadeIn>
+    <h1>Destinations</h1>
+    <p class="subtitle">Explore the World’s Best Travel Spots</p>
+  </div>
+  <div class="destinations-content" @fadeIn>
+    <div class="destination-list">
+      <div class="destination-card" *ngFor="let destination of destinations">
+        <img [src]="destination.image" [alt]="destination.name" loading="lazy" />
+        <div class="destination-info">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+          <a [routerLink]="['/destinations', destination.name.toLowerCase()]" class="cta-button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+.about-container {
+  background-color: white;
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px); /* Adjust for navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #800000; /* Maroon from inspiration */
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FFA500; /* Orange from inspiration */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e67e22; /* Darker orange on hover */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+}

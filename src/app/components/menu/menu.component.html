@@ -1,0 +1,30 @@
+<div class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="/assets/images/logo.png" alt="Blissful Globe Travel Logo" class="logo-image" />
+    </a>
+  </div>
+  <nav class="nav-wrapper">
+    <ul>
+      <li class="nav-item"><a routerLink="/home" class="active">Home</a></li>
+      <li class="nav-item"><a routerLink="/about">About</a></li>
+      <li class="nav-item dropdown">
+        <a (click)="toggleDestinationsDropdown()" class="dropdown-toggle">Destinations <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu" [ngClass]="{'open': isDestinationsDropdownOpen}">
+          <li><a routerLink="/destinations/nairobi" (click)="closeDestinationsDropdown()">Nairobi</a></li>
+          <li><a routerLink="/destinations/mombasa" (click)="closeDestinationsDropdown()">Mombasa</a></li>
+          <li><a routerLink="/destinations/maasai-mara" (click)="closeDestinationsDropdown()">Maasai Mara</a></li>
+          <li><a routerLink="/destinations/turkana" (click)="closeDestinationsDropdown()">Turkana</a></li>
+          <li><a routerLink="/destinations/kisumu" (click)="closeDestinationsDropdown()">Kisumu</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="button-wrapper">
+    <a href="/enquire" class="enquire-btn">Enquire Now</a>
+  </div>
+  <button class="nav-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+    ☰
+  </button>
+</div>
