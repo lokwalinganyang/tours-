@@ -11,11 +11,10 @@
       <li class="nav-item dropdown">
         <a (click)="toggleDestinationsDropdown()" class="dropdown-toggle">Destinations <span class="arrow">▼</span></a>
         <ul class="dropdown-menu" [ngClass]="{'open': isDestinationsDropdownOpen}">
-          <li><a routerLink="/destinations/nairobi" (click)="closeDestinationsDropdown()">Nairobi</a></li>
-          <li><a routerLink="/destinations/mombasa" (click)="closeDestinationsDropdown()">Mombasa</a></li>
-          <li><a routerLink="/destinations/maasai-mara" (click)="closeDestinationsDropdown()">Maasai Mara</a></li>
-          <li><a routerLink="/destinations/turkana" (click)="closeDestinationsDropdown()">Turkana</a></li>
-          <li><a routerLink="/destinations/kisumu" (click)="closeDestinationsDropdown()">Kisumu</a></li>
+          <li><a routerLink="/destinations/kenya/packages" (click)="closeDestinationsDropdown()">Kenya</a></li>
+          <li><a routerLink="/destinations/uganda/packages" (click)="closeDestinationsDropdown()">Uganda</a></li>
+          <li><a routerLink="/destinations/tanzania/packages" (click)="closeDestinationsDropdown()">Tanzania</a></li>
+          <li><a routerLink="/destinations/rwanda/packages" (click)="closeDestinationsDropdown()">Rwanda</a></li>
         </ul>
       </li>
       <li class="nav-item"><a routerLink="/contact">Contact</a></li>

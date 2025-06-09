@@ -11,10 +11,10 @@ import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 })
 export class ImageSliderComponent {
   slides = [
-    { image: '/assets/images/tour1.jpg', title: 'Discover Paradise' },
-    { image: '/assets/images/tour2.jpg', title: 'Adventure Awaits' },
-    { image: '/assets/images/tour3.jpg', title: 'Cultural Journey' },
-    { image: '/assets/images/tour4.jpg', title: 'Scenic Escape' }
+    { image: '/assets/images/Amboseli.jpg', title: 'Discover Paradise' },
+    { image: '/assets/images/Mt Kenya.jpg', title: 'Adventure Awaits' },
+    { image: '/assets/images/Samburu.jpg', title: 'Cultural Journey' },
+    { image: '/assets/images/Nairobi.jpg', title: 'Scenic Escape' }
   ];
 
   customOptions: OwlOptions = {
