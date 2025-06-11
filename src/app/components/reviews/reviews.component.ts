@@ -18,6 +18,10 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class ReviewsComponent {
+  sectionTitle = 'Website Review Strategy Audit Schedule';
+  sectionDescription = 'Presenting this set of slides with name Website Review Strategy Audit Schedule Analysis. The topics discussed in these slides are Website Review Strategy Audit Schedule. This is a complete...';
+  overallRating = 4.5; // Aggregated rating based on 3 reviews
+  reviewCount = 3;
   reviews = [
     {
       name: 'Jane Doe',

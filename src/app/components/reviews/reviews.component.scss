@@ -68,72 +68,109 @@
 
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #800000; /* Match services section color */
+    margin-bottom: 10px;
+    color: #800000;
     position: relative;
     z-index: 2;
   }
 
-  .review-card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .section-description {
+    font-size: 1rem;
+    color: #444;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease;
+    line-height: 1.5;
+  }
 
-    &:hover {
-      transform: translateY(-5px);
-    }
+  .overall-rating {
+    margin-bottom: 20px;
 
-    .review-image {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
+    .rating {
+      display: flex; /* Ensure horizontal alignment */
+      justify-content: center; /* Center the stars */
+      margin-right: 10px; /* Space between stars and count */
 
-    .review-content {
-      text-align: left;
-      flex-grow: 1;
-
-      h3 {
+      span {
         font-size: 1.5rem;
-        margin: 0 0 10px;
-        color: #800000; /* Match services section color */
-        display: flex;
-        align-items: center;
+        color: #ccc;
+        margin: 0 2px; /* Small gap between stars */
 
-        .location {
-          font-size: 1rem;
-          color: #666;
-          margin-left: 10px;
+        &.filled {
+          color: #FFA500;
         }
       }
+    }
 
-      .rating {
-        margin-bottom: 10px;
+    .rating-count {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
 
-        span {
-          font-size: 1.2rem;
-          color: #ccc;
+  .reviews-list {
+    .review-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 0.3s ease;
 
-          &.filled {
-            color: #FFA500; /* Match services section button color */
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .review-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .review-content {
+        text-align: left;
+        flex-grow: 1;
+
+        h3 {
+          font-size: 1.5rem;
+          margin: 0 0 10px;
+          color: #800000;
+          display: flex;
+          align-items: center;
+
+          .location {
+            font-size: 1rem;
+            color: #666;
+            margin-left: 10px;
           }
         }
-      }
 
-      p {
-        font-size: 1rem;
-        color: #444;
-        line-height: 1.5;
+        .rating {
+          display: flex; /* Ensure horizontal alignment */
+          justify-content: flex-start; /* Align left for individual ratings */
+          margin-bottom: 10px;
+
+          span {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin: 0 2px; /* Small gap between stars */
+
+            &.filled {
+              color: #FFA500;
+            }
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          color: #444;
+          line-height: 1.5;
+        }
       }
     }
   }
@@ -149,17 +186,23 @@
       height: 3px;
     }
 
-    .review-card {
-      flex-direction: column;
-      text-align: center;
-
-      .review-image {
-        margin-right: 0;
-        margin-bottom: 15px;
-      }
-
-      .review-content {
+    .reviews-list {
+      .review-card {
+        flex-direction: column;
         text-align: center;
+
+        .review-image {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .review-content {
+          text-align: center;
+
+          .rating {
+            justify-content: center; /* Center ratings on mobile */
+          }
+        }
       }
     }
   }

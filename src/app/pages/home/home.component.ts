@@ -5,7 +5,8 @@ import { ImageSliderComponent } from '../../components/image-slider/image-slider
 import { ServicesSectionComponent } from '../../components/services-section/services-section.component';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { BannerComponent } from '../../components/banner/banner.component';
-import { ReviewsComponent } from '../../components/reviews/reviews.component'; // Updated import
+import { ReviewsComponent } from '../../components/reviews/reviews.component';
+import { PackagesComponent } from '../../components/packages/packages.component'; // Updated import
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ import { ReviewsComponent } from '../../components/reviews/reviews.component'; /
     ImageSliderComponent,
     ServicesSectionComponent,
     BannerComponent,
-    ReviewsComponent // Updated to ReviewsComponent
+    ReviewsComponent,
+    PackagesComponent // Updated to PackagesComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
