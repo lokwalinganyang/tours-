@@ -5,11 +5,19 @@ import { ImageSliderComponent } from '../../components/image-slider/image-slider
 import { ServicesSectionComponent } from '../../components/services-section/services-section.component';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { BannerComponent } from '../../components/banner/banner.component';
+import { ReviewsComponent } from '../../components/reviews/reviews.component'; // Updated import
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ImageSliderComponent,ServicesSectionComponent,BannerComponent], // Ensure NewsletterComponent is included
+  imports: [
+    CommonModule,
+    RouterModule,
+    ImageSliderComponent,
+    ServicesSectionComponent,
+    BannerComponent,
+    ReviewsComponent // Updated to ReviewsComponent
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [

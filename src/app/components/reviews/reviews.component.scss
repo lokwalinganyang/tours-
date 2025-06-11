@@ -1,0 +1,166 @@
+.reviews-section {
+  max-width: 1200px;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  /* Brushstroke border top (white torn edge) */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(
+      45deg,
+      #FFFFFF 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    clip-path: polygon(
+      0 0,
+      10% 20%,
+      20% 10%,
+      30% 25%,
+      40% 15%,
+      50% 30%,
+      60% 20%,
+      70% 35%,
+      80% 10%,
+      90% 25%,
+      100% 0
+    );
+    z-index: 1;
+  }
+
+  /* Brushstroke border bottom (green wavy line) */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      #2E7D32 0%,
+      rgba(46, 125, 50, 0.7) 50%,
+      rgba(46, 125, 50, 0) 100%
+    );
+    clip-path: polygon(
+      0 0,
+      10% 50%,
+      20% 20%,
+      30% 70%,
+      40% 30%,
+      50% 60%,
+      60% 40%,
+      70% 80%,
+      80% 10%,
+      90% 60%,
+      100% 0
+    );
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #800000; /* Match services section color */
+    position: relative;
+    z-index: 2;
+  }
+
+  .review-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .review-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .review-content {
+      text-align: left;
+      flex-grow: 1;
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+        color: #800000; /* Match services section color */
+        display: flex;
+        align-items: center;
+
+        .location {
+          font-size: 1rem;
+          color: #666;
+          margin-left: 10px;
+        }
+      }
+
+      .rating {
+        margin-bottom: 10px;
+
+        span {
+          font-size: 1.2rem;
+          color: #ccc;
+
+          &.filled {
+            color: #FFA500; /* Match services section button color */
+          }
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        color: #444;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+
+    &::before {
+      height: 20px;
+    }
+
+    &::after {
+      height: 3px;
+    }
+
+    .review-card {
+      flex-direction: column;
+      text-align: center;
+
+      .review-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .review-content {
+        text-align: center;
+      }
+    }
+  }
+}

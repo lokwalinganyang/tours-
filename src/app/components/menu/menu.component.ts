@@ -17,11 +17,15 @@ export class MenuComponent {
     this.menuOpen = !this.menuOpen;
   }
 
-  toggleDestinationsDropdown() {
-    this.isDestinationsDropdownOpen = !this.isDestinationsDropdownOpen; // Toggle for mobile
+  toggleDestinationsDropdown(event?: Event) {
+    event?.preventDefault(); // Prevent default behavior if needed
+    event?.stopPropagation(); // Stop event from bubbling up
+    this.isDestinationsDropdownOpen = !this.isDestinationsDropdownOpen;
   }
 
   closeDestinationsDropdown() {
-    this.isDestinationsDropdownOpen = false; // Close dropdown after selection
+    if (this.menuOpen) {
+      this.isDestinationsDropdownOpen = false; // Close dropdown only if menu is open
+    }
   }
 }

@@ -4,26 +4,28 @@
       <img src="/assets/images/logo.png" alt="Blissful Globe Travel Logo" class="logo-image" />
     </a>
   </div>
-  <nav class="nav-wrapper">
+  <nav class="nav-wrapper" [ngClass]="{ 'open': menuOpen }">
     <ul>
-      <li class="nav-item"><a routerLink="/home" class="active">Home</a></li>
-      <li class="nav-item"><a routerLink="/about">About</a></li>
+      <li class="nav-item"><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li class="nav-item dropdown">
-        <a (click)="toggleDestinationsDropdown()" class="dropdown-toggle">Destinations <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu" [ngClass]="{'open': isDestinationsDropdownOpen}">
-          <li><a routerLink="/destinations/kenya/packages" (click)="closeDestinationsDropdown()">Kenya</a></li>
-          <li><a routerLink="/destinations/uganda/packages" (click)="closeDestinationsDropdown()">Uganda</a></li>
-          <li><a routerLink="/destinations/tanzania/packages" (click)="closeDestinationsDropdown()">Tanzania</a></li>
-          <li><a routerLink="/destinations/rwanda/packages" (click)="closeDestinationsDropdown()">Rwanda</a></li>
+        <a (click)="toggleDestinationsDropdown($event)" class="dropdown-toggle">Destinations <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu" [ngClass]="{ 'open': isDestinationsDropdownOpen }">
+          <li><a routerLink="/destinations/kenya/packages" (click)="closeDestinationsDropdown()" routerLinkActive="active">Kenya</a></li>
+          <li><a routerLink="/destinations/uganda/packages" (click)="closeDestinationsDropdown()" routerLinkActive="active">Uganda</a></li>
+          <li><a routerLink="/destinations/tanzania/packages" (click)="closeDestinationsDropdown()" routerLinkActive="active">Tanzania</a></li>
+          <li><a routerLink="/destinations/rwanda/packages" (click)="closeDestinationsDropdown()" routerLinkActive="active">Rwanda</a></li>
         </ul>
       </li>
-      <li class="nav-item"><a routerLink="/contact">Contact</a></li>
+      <li class="nav-item"><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li class="nav-item"><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
     </ul>
   </nav>
   <div class="button-wrapper">
     <a href="/enquire" class="enquire-btn">Enquire Now</a>
   </div>
   <button class="nav-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-    ☰
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 </div>

@@ -5,13 +5,13 @@
 }
 
 .banner {
-  background-color: #025719; // Changed to green
+  background-color: #054b03; // Changed to green
   color: #030303;
   text-align: center;
   padding: 2rem 1rem;
   margin: 0;
   min-height: 20vh;
-  width: 70vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +29,8 @@
 
   .enquiry-button {
     padding: 0.75rem 1.5rem;
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: #F57F17;
+    color: #d3dcd3;
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
@@ -38,7 +38,7 @@
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-      background-color: darken(#F57F17, 10%);
+      background-color: darken(#025719,10%);
     }
   }
 }

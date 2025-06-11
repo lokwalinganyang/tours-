@@ -20,11 +20,12 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class ServicesSectionComponent {
   services = [
-    { name: 'Safaris', description: 'Experience the thrill of African safaris.', image: 'assets/images/tour1.jpg' },
-    { name: 'Game Drives', description: 'Explore wildlife with guided game drives.', image: 'assets/images/tour2.jpg' },
-    { name: 'Flight Booking', description: 'Hassle-free flight bookings for your trip.', image: 'assets/images/tour3.jpg' },
-    { name: 'Accommodation Booking', description: 'Book the best stays for your journey.', image: 'assets/images/tour4.jpg' },
-    { name: 'Airport Transfer', description: 'Seamless airport transfers for your convenience.', image: 'assets/images/tour1.jpg' }, // Reusing tour1
-    { name: 'Holiday Planning', description: 'Plan your perfect holiday with us.', image: 'assets/images/tour2.jpg' } // Reusing tour2
+    { name: 'Safaris & Game Drives', description: 'Discover Africa’s iconic wildlife and landscapes with tailored game drives featuring the Big Five and more.', image: 'assets/images/safaris.png' },
+    { name: 'Beach Holidays & Coastal Excursions', description: 'Relax on sun-drenched shores with all-inclusive beach getaways, snorkeling, and romantic retreats.', image: 'assets/images/coastal..png' },
+    { name: 'Cultural Tours & Experiences', description: 'Immerse in Kenya’s vibrant heritage with Maasai dances, Samburu beadwork, and Swahili storytelling.', image: 'assets/images/cultural.png' },
+    { name: 'Accommodation Booking', description: 'Handpicked stays from budget to 5-star hotels, eco-lodges, and luxury camps across East Africa.', image: 'assets/images/bedding.png' },
+    { name: 'Airport Transfers', description: 'Stress-free pickups and drop-offs with VIP meet-and-greet services at Nairobi, Mombasa, and more.', image: 'assets/images/airport.png' },
+    { name: 'Flight Booking & Travel Logistics', description: 'Smooth flight bookings, safari charters, and travel planning with visa assistance on request.', image: 'assets/images/maps.png' },
+    { name: 'Customized Travel Planning', description: 'Tailor-made itineraries for honeymoons, solo adventures, or multi-country routes with personalized consultations.', image: 'assets/images/safaris.png' } // Reusing safaris as placeholder
   ];
 }

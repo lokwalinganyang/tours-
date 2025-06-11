@@ -1,0 +1,12 @@
+<section class="reviews-section" *ngFor="let review of reviews; let i = index" @fadeInUp>
+  <div class="review-card" [style.animation-delay]="i * 200 + 'ms'">
+    <img [src]="review.image" alt="{{ review.name }}'s review" class="review-image" />
+    <div class="review-content">
+      <h3>{{ review.name }} <span class="location">({{ review.location }})</span></h3>
+      <div class="rating" *ngFor="let star of [1, 2, 3, 4, 5]">
+        <span [ngClass]="{'filled': star <= review.rating}">★</span>
+      </div>
+      <p>{{ review.comment }}</p>
+    </div>
+  </div>
+</section>
